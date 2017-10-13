@@ -525,6 +525,8 @@
 				<p class="ednote">The issue of using the HTML <code>nav</code> element as a possible encoding of the table of
 					contents is mentioned or explicitly addressed in a number of issues listed below.</p>
 
+				<p class="issue" data-number="26">Should the table of contents be a separate HTML file or is the listing of
+					resources in the default reading order an implicit table of contents?</p>
 				<p class="issue" data-number="35">Define the resources in the default reading order of a Web Publication to
 					be the files referenced in the first</p>
 				<p class="issue" data-number="39">There is a consensus that a Web Publication must have a reading order and
@@ -572,8 +574,8 @@
 				</ol>
 
 				<p>User Agents MAY support additional properties but MUST NOT include unrecognized properties in the infoset.
-					The use of linked records is RECOMMENDED whenever possible, as the use of native formats standardizes and
-					simplifies processing by user agents.</p>
+					The use of <a href="#manifest-links">linked records</a> is RECOMMENDED whenever possible, as the use of
+					native formats standardizes and simplifies processing by user agents.</p>
 			</section>
 		</section>
 		<section id="manifest">
@@ -607,51 +609,49 @@
 				<h3>Serialization</h3>
 
 				<p class="issue" data-number="25"></p>
-				<p class="issue" data-number="26">Should the table of contents be a separate HTML file or is the listing of
-					resources in the default reading order an implicit table of contents?</p>
 				<p class="issue" data-number="32"></p>
-				
+
 				<section id="manifest-links">
 					<h3>Links</h3>
-					
-					<p>The manifest allows linking to other resources on the Web. Such links MUST define the relationship
-						between the Web Publication and the linked resource.</p>
-					
+
+					<p>The manifest allows linking to resources both internal and external to the Web Publication. Such links
+						MUST define the relationship between the Web Publication and the linked resource.</p>
+
 					<p class="ednote">The exact serialization of links is still under discussion and will be formalized in a
 						future revision.</p>
-					
+
 					<p>Links are used to express many parts of the Web Publication's infoset, including but not limited
 						to:</p>
-					
+
 					<ul>
 						<li><a href="#wp-canonical-identifier">Canonical identifier</a> using the
-							<code>rel='canonical'</code> link relation.&#160;[[rfc6596]]</li>
+								<code>rel='canonical'</code> link relation.&#160;[[rfc6596]]</li>
 						<li><a href="#wp-table-of-contents">Table of Contents</a> in the cases where the ToC is specified as
 							a link to an HTML nav element.</li>
 						<li><a href="#wp-metadata">External metadata</a> that may be expressed in established vocabularies
 							such as ONIX, MARC, schema.org, or Dublin Core.</li>
 					</ul>
-					
+
 					<p class="ednote">There are some overlaps between this list and, e.g., the separate section on canonical
 						identifiers.</p>
-					
+
 					<p>This linking mechanism MAY also be used to express other common link structures on the open Web. For
 						example:</p>
-					
+
 					<ul>
 						<li>Distribution feeds such as <a href="http://opds-spec.org/specs/opds-catalog-1-1">OPDS</a> or <a
-							href="https://tools.ietf.org/html/rfc4287">Atom</a>&#160;[[rfc4287]]</li>
-						
+								href="https://tools.ietf.org/html/rfc4287">Atom</a>&#160;[[rfc4287]]</li>
+
 						<li>Alternate versions of the publication</li>
 						<li><a href="https://www.w3.org/TR/webmention/">Web Mentions</a>&#160;[[webmention]]</li>
 					</ul>
-					
+
 					<p class="note">Some of these link structures, such as dynamic search links, may require support for <a
-						href="https://tools.ietf.org/html/rfc6570">URI templates</a>&#160;[[rfc6570]] to be meaningfully
+							href="https://tools.ietf.org/html/rfc6570">URI templates</a>&#160;[[rfc6570]] to be meaningfully
 						useful in the context of a Web Publications. User agents should(?) support URI templates in order to
 						make it easier for publishers to integrate dynamic server-side features into their publications with
 						minimal coding and effort.</p>
-					
+
 					<p class="issue" data-number="67"></p>
 				</section>
 			</section>
